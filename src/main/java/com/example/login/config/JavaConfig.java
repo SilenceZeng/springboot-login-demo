@@ -1,6 +1,5 @@
 package com.example.login.config;
 
-import com.example.login.mapper.UserMapper;
 import com.example.login.service.OrderService;
 import com.example.login.service.UserService;
 import org.springframework.context.annotation.Bean;

@@ -1,14 +1,13 @@
 package com.example.login.service;
 
 import com.example.login.entity.User;
-import com.example.login.mapper.UserMapper;
+import com.example.login.dao.UserMapper;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.Instant;
 import java.util.Collections;
 
 @Service
@@ -21,6 +20,10 @@ public class UserService implements UserDetailsService {
         this.passwordEncoder = bCryptPasswordEncoder;
         this.userMapper = userMapper;
         // save("admin", "123456");
+    }
+
+    public User getUserById(Integer userId) {
+        return this.userMapper.getUserById(userId);
     }
 
     public void save(String username, String password) {
