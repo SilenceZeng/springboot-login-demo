@@ -15,7 +15,7 @@ node {
         return rollback()
     } else if(params.BuildType=='Normal'){
         return normalCIBuild(version)
-    } else if(branchName == 'master'){
+    } else if(branchName == 'main'){
         setScmPollStrategyAndBuildTypes(['Normal', 'Rollback']);
     }
 }
