@@ -39,7 +39,7 @@ def normalCIBuild(String version) {
 }
 
 def deployVersion(String version) {
-//     sh "ssh root@47.103.56.219 'docker rm -f xdml && docker run --name xdml -d -p 8080:8080 47.103.56.219:5000/xdml-springboot:${version}'"
+     // sh "ssh root@8.134.79.72 'docker rm -f xdml && docker run --name xdml -d -p 8080:8080 8.134.79.72:5000/xdml-springboot:${version}'"
 }
 
 def setScmPollStrategyAndBuildTypes(List buildTypes) {
